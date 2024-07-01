@@ -43,7 +43,7 @@ export default async function Home() {
       <div className="relative w-full bg-image">
         <Image
           src="/bg-image-2.jpeg"
-          className="w-full md:max-h-96 h-80 object-cover"
+          className="w-full md:max-h-96 md:h-[375px] h-80 object-cover"
           alt="Background Image"
           width={1900}
           height={300}

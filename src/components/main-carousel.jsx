@@ -21,7 +21,7 @@ const MainCarousel = ({ combinedData }) => {
     return (
         <>
             <Input
-                className="w-11/12 px-3 py-5  md:max-w-4xl md:py-6 md:px-4 focus-visible:ring-1 search-box"
+                className="w-11/12 px-3 py-5 md:max-w-4xl md:py-6 md:px-4 focus-visible:ring-1 search-box"
                 type="text"
                 id="search"
                 placeholder="Discover Hidden Stories on Screen"
@@ -38,7 +38,7 @@ const MainCarousel = ({ combinedData }) => {
                 onMouseEnter={plugin.current.stop}
                 onMouseLeave={plugin.current.reset}
             >
-                <CarouselContent className="md:m-8 md:mt-4 px-3 mx-auto my-8 mt-4">
+                <CarouselContent className="md:m-8 md:mt-2 px-3 mx-auto my-8 mt-4">
                     {filteredItem.length > 0 ? filteredItem.map((item) => (
                         <MainCarouselItem
                             key={item.id}
