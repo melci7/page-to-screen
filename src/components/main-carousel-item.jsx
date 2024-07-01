@@ -57,7 +57,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                     </motion.div>
                 </CarouselItem>
             </DialogTrigger>
-            <DialogContent className="overflow-scroll md:overflow-hidden md:h-auto h-screen w-11/12 mt-4 flex md:flex-row flex-col md:items-start items-center py-8 px-6 md:max-w-5xl gap-5">
+            <DialogContent className="rounded-lg overflow-scroll md:overflow-hidden md:h-auto max-h-fit h-[800px] w-11/12 flex md:flex-row flex-col md:items-start items-center py-8 px-6 md:max-w-5xl gap-5">
                 <div className="flex flex-col gap-4">
                     <div
                         className="relative"
@@ -94,7 +94,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                     <p className='md:max-w-3xl leading-relaxed max-w-lg'>{item?.movie?.overview}</p>
                     <p className=''>{isClicked ? item?.movie?.runTime + " minutes" : item?.volumeInfo?.pageCount + " pages"} </p>
 
-                    <div className="flex md:flex-row flex-col items-center md:mt-3 mt-1 gap-10">
+                    <div className="flex md:flex-row flex-col items-center md:mt-3 mt-1 gap-5">
                         <div className="flex md:flex-col md:gap-1 gap-3">
                             <p className='font-medium'>This {isClicked ? "movie" : "edition"}</p>
                             <div className='flex md:gap-10 gap-5 items-center tracking-wide'>
