@@ -1,0 +1,44 @@
+.carousel-item {
+  cursor: pointer;
+}
+
+.bg-image {
+  height: 350px;
+}
+
+.cover_mockup {
+  position: relative;
+  box-shadow: 1px 0px #aaa, 1px 2px 1px #aaa, 2px 1px 1px #aaa, 1px 2px 1px #aaa,
+    3px 2px 1px #aaa, 2px 3px 1px #aaa, 4px 3px 1px #aaa,
+    -5px -5px 20px 0px rgba(255, 255, 255, 0.15), 7px 7px 4px rgba(0, 0, 0, 0.3),
+    15px 15px 20px rgba(0, 0, 0, 0.3);
+  will-change: box-shadow;
+  transform: translateZ(0);
+}
+
+.cover_mockup::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  will-change: background-image;
+  transform: translateZ(0);
+}
+
+/* the following is only for pen preview */
+.cover_mockup:hover {
+  box-shadow: none;
+  transition: all 0.3s ease-out;
+}
+.cover_mockup:hover::after {
+  display: none;
+}
