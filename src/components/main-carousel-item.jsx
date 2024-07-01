@@ -57,7 +57,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                     </motion.div>
                 </CarouselItem>
             </DialogTrigger>
-            <DialogContent className="overflow-scroll md:overflow-hidden md:h-auto h-screen flex md:flex-row flex-col md:items-start items-center py-8 px-6 md:max-w-5xl gap-5">
+            <DialogContent className="overflow-scroll md:overflow-hidden md:h-auto h-screen w-11/12 mt-4 flex md:flex-row flex-col md:items-start items-center py-8 px-6 md:max-w-5xl gap-5">
                 <div className="flex flex-col gap-4">
                     <div
                         className="relative"
