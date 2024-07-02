@@ -6,6 +6,10 @@
   height: 350px;
 }
 
+.book_cover {
+  box-shadow: 8px 6px 7px 0px #7f818e;
+}
+
 .cover_mockup {
   position: relative;
   box-shadow: 1px 0px 1px #aaa, 1px 2px 1px #aaa, 2px 1px 1px #aaa,

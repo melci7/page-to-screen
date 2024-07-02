@@ -39,7 +39,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
             <DialogTrigger asChild>
                 <CarouselItem className="lg:basis-1/4 md:basis-3/7 basis-1/1 md:pl-3 md:mr-4 py-2 px-0 carousel-item cursor-pointer">
                     <motion.div
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.03 }}
                         transition={{ type: "tween", stiffness: 300, delay: 0.05 }}
                         whileTap={{ scale: .98 }}
                         className="md:p-0 p-3"
@@ -49,7 +49,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                                 <img
                                     src={hoveredImageSrc === item.movie?.moviePoster ? item.movie?.moviePoster : item.bookCover}
                                     alt="Cover of Books or Movie"
-                                    className={`w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
+                                    className={`${styles.book_cover} w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
                                     onMouseEnter={() => setHoveredImageSrc(item.movie?.moviePoster)}
                                     onMouseLeave={() => setHoveredImageSrc(null)}
                                 />
