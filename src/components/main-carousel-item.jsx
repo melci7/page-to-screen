@@ -48,7 +48,8 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                             <CardContent className="flex aspect-square items-center justify-center p-0">
                                 <img
                                     src={hoveredImageSrc === item.movie?.moviePoster ? item.movie?.moviePoster : item.bookCover}
-                                    className={`${styles.cover_mockup} w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
+                                    alt="Cover of Books or Movie"
+                                    className={`w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
                                     onMouseEnter={() => setHoveredImageSrc(item.movie?.moviePoster)}
                                     onMouseLeave={() => setHoveredImageSrc(null)}
                                 />
@@ -66,7 +67,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                     >
                         <img
                             src={isClicked ? item?.movie?.moviePoster : item?.bookCover}
-                            alt={item?.volumeInfo?.title}
+                            alt={item?.volumeInfo?.title || "Unknown"}
                             className={`min-w-64 max-w-64 h-96 transition-all duration-300 rounded-lg ${!isClicked && "rounded-l-none"} ${hoveredImageSrc ? ' opacity-75' : ''}`}
 
                         />

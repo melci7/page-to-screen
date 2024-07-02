@@ -9,7 +9,7 @@ export async function fetchBookData(apiKey, startIndex = 0, accumulatedBooks = [
         const imageLinks = item.volumeInfo.imageLinks;
         if (imageLinks) {
             const thumbnailUrl = imageLinks.thumbnail;
-            const largerImageUrl = thumbnailUrl.replace("&edge=curl", "") + "&fife=w300-h600";
+            const largerImageUrl = thumbnailUrl.replace("&edge=curl", "") + "&fife=w300-h400";
             return { ...item, bookCover: largerImageUrl };
         }
         return item;
