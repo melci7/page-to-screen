@@ -1,6 +1,5 @@
 import * as React from "react";
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card";
 import {
     CarouselItem
@@ -37,25 +36,19 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
 
         <Dialog>
             <DialogTrigger asChild>
-                <CarouselItem className="lg:basis-1/4 md:basis-3/7 basis-1/1 md:pl-3 md:mr-4 py-2 px-0 carousel-item cursor-pointer">
-                    <motion.div
-                        whileHover={{ scale: 1.03 }}
-                        transition={{ type: "tween", stiffness: 300, delay: 0.05 }}
-                        whileTap={{ scale: .98 }}
-                        className="md:p-0 p-3"
-                    >
-                        <Card>
-                            <CardContent className="flex aspect-square items-center justify-center p-0">
-                                <img
-                                    src={hoveredImageSrc === item.movie?.moviePoster ? item.movie?.moviePoster : item.bookCover}
-                                    alt="Cover of Books or Movie"
-                                    className={`${styles.book_cover} w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
-                                    onMouseEnter={() => setHoveredImageSrc(item.movie?.moviePoster)}
-                                    onMouseLeave={() => setHoveredImageSrc(null)}
-                                />
-                            </CardContent>
-                        </Card>
-                    </motion.div>
+                <CarouselItem className="lg:basis-1/4 md:basis-3/7 basis-1/1 md:pl-3 md:mr-4 py-2 px-0 carousel-item cursor-pointer active:scale-95 hover:scale-105 duration-300 ease-out transition-all">
+
+                    <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-0">
+                            <img
+                                src={hoveredImageSrc === item.movie?.moviePoster ? item.movie?.moviePoster : item.bookCover}
+                                alt="Cover of Books or Movie"
+                                className={`${styles.book_cover} w-[252px] h-96 md:w-full md:h-96 rounded-r-lg ${hoveredImageSrc === item.movie?.moviePoster && 'rounded-l-lg'}`}
+                                onMouseEnter={() => setHoveredImageSrc(item.movie?.moviePoster)}
+                                onMouseLeave={() => setHoveredImageSrc(null)}
+                            />
+                        </CardContent>
+                    </Card>
                 </CarouselItem>
             </DialogTrigger>
             <DialogContent className="rounded-lg overflow-scroll md:overflow-hidden md:h-auto max-h-fit h-[600px] w-11/12 flex md:flex-row flex-col md:items-start items-center py-8 px-6 md:max-w-5xl gap-5">
@@ -95,7 +88,7 @@ export default function MainCarouselItem({ item, setHoveredImageSrc, hoveredImag
                     <p className='md:max-w-3xl leading-relaxed max-w-lg'>{item?.movie?.overview}</p>
                     <p className=''>{isClicked ? item?.movie?.runTime + " minutes" : item?.volumeInfo?.pageCount + " pages"} </p>
 
-                    <div className="flex md:flex-row flex-col items-center md:mt-3 mt-1 gap-5">
+                    <div className="flex md:flex-row flex-col items-center md:mt-3 mt-1 gap-12">
                         <div className="flex md:flex-col md:gap-1 gap-3">
                             <p className='font-medium'>This {isClicked ? "movie" : "edition"}</p>
                             <div className='flex md:gap-10 gap-5 items-center tracking-wide'>
