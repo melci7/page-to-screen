@@ -37,8 +37,6 @@ To run the project locally, follow these steps:
    ```env
    NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY=your-google-books-api-key
    NEXT_PUBLIC_TMDB_API_KEY=your-tmdb-api-key
-   NEXTAUTH_URL=http://localhost:3000
-   NEXTAUTH_SECRET=your-nextauth-secret
    ```
 
 4. **Run the Development Server**
