@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Page to Screen
 
-## Getting Started
+A Next.js app showcasing book-to-movie adaptations. This application bridges the worlds of literature and cinema, providing detailed information about books and their corresponding film adaptations. Designed for book and movie enthusiasts, it offers a comprehensive view of literary works and their cinematic counterparts.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Book and Movie Integration**: Combines data from the Google Books API and The Movie Database (TMDB) API.
+- **Streaming Availability**: Displays where movies can be streamed.
+- **Detailed View**: Includes book summaries, author information, movie overviews, cast details, and ratings.
+- **Search and Explore**: Users can search for specific books or movies and discover adaptations.
+- **Responsive Design**: Ensures a seamless experience across all devices with Tailwind CSS.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js](https://nextjs.org/) (React-based framework for server-rendered and static websites)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (utility-first CSS framework)
+- **APIs**: [Google Books API](https://developers.google.com/books) and [TMDB API](https://developers.themoviedb.org/)
+- **State Management**: Context API for managing global state
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation and Setup
 
-## Learn More
+To run the project locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/melci7/page-to-screen.git
+   cd page-to-screen
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. **Environment Variables**
+   Create a `.env.local` file in the root directory and add the following environment variables:
+   ```env
+   NEXT_PUBLIC_GOOGLE_BOOKS_API_KEY=your-google-books-api-key
+   NEXT_PUBLIC_TMDB_API_KEY=your-tmdb-api-key
+   NEXTAUTH_URL=http://localhost:3000
+   NEXTAUTH_SECRET=your-nextauth-secret
+   ```
 
-## Deploy on Vercel
+4. **Run the Development Server**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Homepage Screenshot](https://i.imgur.com/9BxsYwn.png)
+![Book and Movie Details Screenshot](https://i.imgur.com/hSOxF84.png)
+
+## Contact
+
+If you have any questions or need further assistance, feel free to contact me:
+
+- Email: [melci721@gmail.com](mailto:melci721@gmail.com)
+- LinkedIn: [Muhammed Emrullah Elçi](https://www.linkedin.com/in/muhammed-elci/)
